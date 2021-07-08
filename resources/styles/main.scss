@@ -1,4 +1,30 @@
 // Styles imports below
 
 //Reset CSS
-@import '../node_modules/reset-css/reset.css';
+@import "../node_modules/reset-css/reset.css";
+@import "global/main.scss";
+@import "header/main.scss";
+@import "hero/main.scss";
+body {
+    font-family: "Nunito", sans-serif;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 999px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
+@media (min-width: 1000px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}

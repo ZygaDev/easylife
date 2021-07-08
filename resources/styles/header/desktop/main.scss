@@ -1,0 +1,45 @@
+header {
+    @media (min-width: 1000px) {
+        div.container {
+            display: flex;
+            flex-direction: inherit;
+            align-items: center;
+            img.logo.desktop {
+                width: 200px;
+            }
+            nav {
+                width: 100%;
+                input {
+                    display: none;
+                }
+                div#overlay {
+                    height: auto;
+                    width: auto;
+                    background: transparent;
+                    z-index: 2;
+                    visibility: visible;
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    ul {
+                        flex-direction: inherit;
+                        height: 75px;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        display: flex;
+                        li {
+                            a {
+                                color: $black-txt;
+                                text-decoration: none;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                #overlay-button {
+                    display: none;
+                }
+            }
+        }
+    }
+}

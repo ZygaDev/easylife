@@ -1,0 +1,152 @@
+body {
+    animation: bugfix infinite 1s;
+    -webkit-animation: bugfix infinite 1s;
+
+    header {
+        @media (max-width: 999px) {
+            div.container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 13vh;
+                .logo.mobile {
+                    width: 115px;
+                }
+                .logo-menu {
+                    position: absolute;
+                    width: 115px;
+                    top: 20px;
+                    z-index: 9;
+                    left: 20px;
+                }
+                @keyframes bugfix {
+                    from {
+                        padding: 0;
+                    }
+                    to {
+                        padding: 0;
+                    }
+                }
+                @-webkit-keyframes bugfix {
+                    from {
+                        padding: 0;
+                    }
+                    to {
+                        padding: 0;
+                    }
+                }
+                #overlay-button {
+                    position: absolute;
+                    right: 2em;
+                    z-index: 5;
+                    cursor: pointer;
+                    user-select: none;
+                    span {
+                        height: 2px;
+                        width: 35px;
+                        border-radius: 2px;
+                        background-color: $hamburger;
+                        position: relative;
+                        display: block;
+                        transition: all 0.2s ease-in-out;
+                        &:before {
+                            top: -10px;
+                            visibility: visible;
+                        }
+                        &:after {
+                            top: 10px;
+                        }
+                        &:before,
+                        &:after {
+                            height: 2px;
+                            width: 35px;
+                            border-radius: 2px;
+                            background-color: $hamburger;
+                            position: absolute;
+                            content: "";
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+                }
+                input[type="checkbox"] {
+                    display: none;
+                }
+
+                input[type="checkbox"]:checked ~ #overlay {
+                    visibility: visible;
+                }
+
+                input[type="checkbox"]:checked ~ #overlay-button {
+                    &:hover span,
+                    span {
+                        background: transparent;
+                    }
+                    span {
+                        &:before {
+                            transform: rotate(45deg) translate(7px, 7px);
+                            opacity: 1;
+                            background: $green-menu;
+                        }
+                        &:after {
+                            transform: rotate(-45deg) translate(7px, -7px);
+                            background: $green-menu;
+                        }
+                    }
+                }
+                #overlay {
+                    height: 100vh;
+                    width: 100vw;
+                    background: $grey-menu;
+                    z-index: 2;
+                    visibility: hidden;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    &.active {
+                        visibility: visible;
+                    }
+                    ul {
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                        height: 87vh;
+                        margin-top: 13vh;
+                        padding-left: 0;
+                        list-style-type: none;
+                        li {
+                            padding: 12px;
+                            a {
+                                color: $white-menu;
+                                text-decoration: none;
+                                font-size: 13px;
+                                line-height: 24px;
+                                text-transform: uppercase;
+                                &::after {
+                                    content: "";
+                                    border-bottom: 2px solid $grey-menu;
+                                    width: 60px;
+                                    display: block;
+                                    margin: 5px auto;
+                                }
+                                &:hover {
+                                    color: $white-menu;
+                                    // border-bottom: 1px solid $green-menu;
+                                    // padding-bottom: 10px;
+                                    &::after {
+                                        content: "";
+                                        border-bottom: 2px solid $green-menu;
+                                        width: 60px;
+                                        display: block;
+                                        margin: 5px auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
