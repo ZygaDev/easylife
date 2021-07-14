@@ -1,12 +1,13 @@
 // Styles imports below
-
-//Reset CSS
-@import "../node_modules/reset-css/reset.css";
+@import "../../node_modules/reset-css/reset.css";
 @import "global/main.scss";
 @import "header/main.scss";
 @import "hero/main.scss";
+@import "homepage/main.scss";
 body {
     font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 .container {
     width: 90%;

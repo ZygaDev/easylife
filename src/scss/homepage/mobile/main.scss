@@ -1,0 +1,214 @@
+.who_we {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $white-menu;
+    .image {
+        content: "";
+        background: transparent
+            url(("../../dist/images/homepage/mobile/plant-tree-innovation-save-world.png")) 0% 0%
+            no-repeat padding-box;
+        height: 90vw;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+    }
+    .description {
+        .container {
+            display: flex;
+            flex-direction: column;
+            span {
+                font: normal normal bold 18px/27px Nunito;
+                letter-spacing: 0.65px;
+                color: $black;
+            }
+            .green {
+                color: $green;
+                font: normal normal bold 13px/24px Nunito;
+                letter-spacing: 0.39px;
+            }
+            p {
+                font: normal normal normal 13px/24px Nunito;
+                letter-spacing: 0.39px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+.numbers {
+    margin: 50px 0;
+    .container {
+        .item-animate {
+            display: flex;
+            justify-content: end;
+            text-align: left;
+            align-items: center;
+            .num {
+                font: normal normal bold 35px/65px Nunito;
+                letter-spacing: 0px;
+                color: $green;
+                width: 35%;
+            }
+            span {
+                text-align: left;
+                font: normal normal normal 16px/24px Nunito;
+                letter-spacing: 0.48px;
+            }
+        }
+    }
+}
+@mixin icons-mobile {
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 10px;
+}
+.why_us {
+    content: "";
+
+    background: url("../../dist/images/homepage/mobile/Path 1866.svg") right bottom no-repeat,
+        url("../../dist/images/homepage/mobile/plant-tree-innovation-save-world.png") left top
+            repeat;
+    background-size: cover;
+    .container {
+        .title {
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+            margin: 50px 0;
+            span {
+                font: normal normal bold 18px/27px Nunito;
+                letter-spacing: 0.65px;
+            }
+            .green {
+                color: $green;
+                font: normal normal bold 13px/27px Nunito;
+                letter-spacing: 0px;
+            }
+        }
+        .square {
+            display: grid;
+
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 20px 20px;
+            grid-template-areas:
+                "one two"
+                "three four"
+                "five six"
+                "seven eight";
+            margin-bottom: 50px;
+
+            .sqr {
+                border: 2px solid $white-menu;
+                width: 35vw;
+                height: 35vw;
+                position: relative;
+                font: normal normal bold 13px/20px Nunito;
+                letter-spacing: 0.39px;
+                color: $white-menu;
+                padding: 10px;
+            }
+        }
+        div.one {
+            grid-area: one;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .two {
+            grid-area: two;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .three {
+            grid-area: three;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .four {
+            grid-area: four;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .five {
+            grid-area: five;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .six {
+            grid-area: six;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .seven {
+            grid-area: seven;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+        .eight {
+            grid-area: eight;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .icon {
+                content: "";
+                background: transparent url(("../../dist/images/homepage/mobile/ios-quote.svg")) 0%
+                    0% no-repeat padding-box;
+                @include icons-mobile;
+            }
+        }
+    }
+}

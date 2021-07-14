@@ -18,11 +18,11 @@
 
             <a href="#">
                 <img class="logo mobile"
-                    src="<?php bloginfo('template_directory'); ?>/assets/images/header/mobile/logo_podstawowe_kolor-01.png"
+                    src="<?php bloginfo('template_directory'); ?>/dist/images/header/mobile/logo_podstawowe_kolor-01.png"
                     alt="logo">
 
                 <img class="logo desktop"
-                    src="<?php bloginfo('template_directory'); ?>/assets/images/header/desktop/logo_podstawowe_kolor-01@2x.png"
+                    src="<?php bloginfo('template_directory'); ?>/dist/images/header/desktop/logo_podstawowe_kolor-01@2x.png"
                     alt="logo">
             </a>
 
@@ -31,14 +31,14 @@
                 <label for="overlay-input" id="overlay-button"><span></span></label>
                 <div id="overlay">
                     <img class="logo-menu mobile"
-                        src="<?php bloginfo('template_directory'); ?>/assets/images/header/mobile/white-logo.png"
+                        src="<?php bloginfo('template_directory'); ?>/dist/images/header/mobile/white-logo.png"
                         alt="logo">
                     <ul>
                         <li><a href="#">Nasze usługi</a></li>
                         <li><a href="#">Realizacje</a></li>
-                        <li><a href="#">Baza informacji</a></li>
-                        <li><a href="#">Zadaj pytanie</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li class="white"><a href="#">Baza informacji</a></li>
+                        <li class="white"><a href="#">Zadaj pytanie</a></li>
+                        <li class="white border"><a href="#">Kontakt</a></li>
                     </ul>
                 </div>
             </nav>

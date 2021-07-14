@@ -1,0 +1,50 @@
+@media (min-width: 1000px) {
+    div.hero {
+        background: none;
+        .back {
+            content: "";
+            background: transparent
+                url("../dist/images/homepage/desktop/3d-rendering-entrance-modern-house@2x.png") 0%
+                0% no-repeat padding-box;
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+            top: -10vh;
+            width: 50%;
+            background-position: right;
+            text-align: right;
+            float: right;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5%;
+            span {
+                font-size: 55px;
+                line-height: 65px;
+                font-weight: 900;
+            }
+            .cta-hero {
+                margin-top: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 30vw;
+
+                .cta {
+                    font-size: 16px;
+                    width: 160px;
+                }
+                .video {
+                    position: relative;
+                    bottom: 0;
+                    span {
+                        font-size: 16px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
