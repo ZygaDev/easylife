@@ -1,0 +1,46 @@
+@media (min-width: 1000px) {
+    footer {
+        div.container {
+            p {
+                font: normal normal normal 16px/24px Lato;
+            }
+            span {
+                font: normal normal 900 16px/24px Nunito;
+                letter-spacing: 0.46px;
+            }
+            .flexi {
+                flex-direction: row-reverse;
+            }
+            .menu {
+                display: block;
+                ul {
+                    li {
+                        a {
+                            font: normal normal 600 16px/35px Nunito;
+                            letter-spacing: 0.48px;
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .social {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-around;
+                width: 80%;
+                margin: 40px 0 20px;
+
+                span {
+                    margin-left: 0;
+                }
+                p {
+                    align-items: baseline;
+                }
+            }
+            img {
+                vertical-align: top;
+            }
+        }
+    }
+}

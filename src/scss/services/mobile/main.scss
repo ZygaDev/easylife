@@ -1,0 +1,62 @@
+.services {
+    height: 80vh;
+    .back {
+        content: "";
+        background: linear-gradient(180deg, #4d7d1f7d 0%, #385e1300 100%),
+            url("../dist/images/services/Group517@2x.png") 0% 0% no-repeat padding-box;
+        height: 90vh;
+        background-size: cover;
+        position: relative;
+        top: -10vh;
+        width: 50%;
+        background-position: -35px;
+        text-align: right;
+        float: right;
+    }
+    .breadcrumbs {
+        margin-top: 17px;
+        span {
+            font: normal normal normal 10px/24px Lato;
+            letter-spacing: 0.3px;
+            color: $grey-cta;
+        }
+    }
+    span.green {
+        font: normal normal bold 13px/24px Nunito;
+        letter-spacing: 0.39px;
+        color: $green;
+        display: block;
+        margin-top: 25px;
+    }
+    span {
+        font: normal normal bold 18px/36px Nunito;
+        letter-spacing: 0.65px;
+    }
+
+    .main {
+        .container {
+            position: absolute;
+            top: 60%;
+            transform: translateY(-60%);
+            left: 5%;
+            // margin-top: 130px;
+            span {
+                font-size: 55px;
+                line-height: 65px;
+                font-weight: 900;
+            }
+            ul {
+                li {
+                    margin-top: 16px;
+                    a {
+                        font: normal normal 600 14px/24px Nunito;
+                        letter-spacing: 0.42px;
+                        color: $black-txt;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    @include phone-mobile;
+}

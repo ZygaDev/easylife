@@ -34,7 +34,7 @@
                         src="<?php bloginfo('template_directory'); ?>/dist/images/header/mobile/white-logo.png"
                         alt="logo">
                     <ul>
-                        <li><a href="#">Nasze usługi</a></li>
+                        <li><a href="/nasze-uslugi/">Nasze usługi</a></li>
                         <li><a href="#">Realizacje</a></li>
                         <li class="white"><a href="#">Baza informacji</a></li>
                         <li class="white"><a href="#">Zadaj pytanie</a></li>

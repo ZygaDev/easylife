@@ -2,8 +2,8 @@
 
 function load_theme_scripts()
 {
-  wp_register_style('main', get_template_directory_uri() . '/dist/main.css', array(), 2, 'all');
-  wp_enqueue_style('main');
+  wp_register_style('style', get_template_directory_uri() . '/dist/style.css', array(), 2, 'all');
+  wp_enqueue_style('style');
 }
 add_action('wp_enqueue_scripts', 'load_theme_scripts');
 

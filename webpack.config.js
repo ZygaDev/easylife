@@ -18,7 +18,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "../dist/style.css",
+        }),
         new CopyWebpackPlugin({
             patterns: [{ from: "./images", to: "../dist/images" }],
         }),

@@ -3,12 +3,11 @@
         display: flex;
         flex-direction: row;
         margin-top: 0;
+        padding-top: 0;
+        z-index: 9;
         .image {
             content: "";
-            background: transparent
-                url(("../../dist/images/homepage/desktop/plant-tree-innovation-save-world@2x.png"))
-                0% 0% no-repeat padding-box;
-            height: 90vh;
+            height: 100%;
             width: 50vw;
             background-size: cover;
             background-position: center;
@@ -29,7 +28,7 @@
                     letter-spacing: 0px;
                 }
                 span.green {
-                    font: normal normal 800 16px/65px Nunito;
+                    font: normal normal 800 16px/16px Nunito;
                     letter-spacing: 0px;
                 }
                 p {
@@ -40,6 +39,7 @@
         }
     }
     div.numbers {
+        margin: 100px 0;
         .container {
             display: flex;
             justify-content: space-around;
@@ -61,11 +61,25 @@
         }
     }
     div.why_us {
+        background: none;
         div.container {
             display: flex;
+            justify-content: space-around;
+            content: "";
+            position: relative;
+            overflow: hidden;
+            background: url("../../dist/images/homepage/mobile/Path 1866.svg") right bottom
+                no-repeat;
+            background-size: cover;
+            img {
+                width: 100%;
+                position: absolute;
+                height: auto;
+            }
             .title {
-                width: 30vw;
+                width: 20vw;
                 margin-top: 100px;
+                z-index: 9;
                 span {
                     font: normal normal 800 40px/50px Nunito;
                     letter-spacing: 0px;
@@ -81,7 +95,7 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
                 gap: 30px 30px;
-                width: 70vw;
+                width: 50vw;
                 grid-template-areas:
                     ". one two"
                     "three four five"
@@ -93,63 +107,628 @@
                     font: normal normal 800 20px/25px Nunito;
                     letter-spacing: 0px;
                     border: 3px solid $white;
+                    display: flex;
+                    flex-direction: column-reverse;
                 }
             }
-            @mixin icons {
-                height: 40px;
-                width: 40px;
-                background-size: contain;
-                background-position: center;
+
+            @include icons;
+        }
+    }
+    div.our_offer {
+        .container {
+            margin: 0 0 0 auto;
+            display: flex;
+            width: 90%;
+            .title {
+                width: 50vw;
+                margin: 100px 0;
+                .green {
+                    font: normal normal 800 16px/16px Nunito;
+                    letter-spacing: 0px;
+                }
+                span {
+                    font: normal normal 800 35px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+                p {
+                    font: normal normal normal 16px/22px Nunito;
+                    letter-spacing: 0.48px;
+                    width: 85%;
+                }
+            }
+            #splide2 {
+                width: 50vw;
+            }
+            .splide {
+                padding: 3em 0;
+            }
+            .splide__pagination {
+                display: none;
+            }
+            button.splide__arrow--prev {
+                left: 0px;
+                border: 0px solid;
+                text-align: left;
+                svg {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0%
+                        0% no-repeat padding-box;
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 14px;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    width: 70px;
+                }
+            }
+            button.splide__arrow--next {
+                right: 60%;
+                border: 0px solid;
+                text-align: left;
+                svg {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0%
+                        0% no-repeat padding-box;
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 14px;
+                    position: absolute;
+                    width: 70px;
+                }
+            }
+            .splide__arrow {
+                top: 95%;
+            }
+            #splide2-list,
+            #splide2-track {
+                height: 100%;
+            }
+        }
+    }
+    div.collab {
+        padding-bottom: 50px;
+        .container {
+            margin: 0 auto;
+            .title {
+                width: 50vw;
+                margin: 100px auto;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .green {
+                    font: normal normal 800 16px/16px Nunito;
+                    letter-spacing: 0px;
+                    color: $green;
+                }
+                span {
+                    font: normal normal 800 35px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+                p {
+                    font: normal normal normal 16px/22px Nunito;
+                    letter-spacing: 0.48px;
+                    width: 70%;
+                    margin: 20px auto;
+                }
+            }
+            .images {
+                width: 70%;
+                margin: 0 auto;
+            }
+            #loadMore,
+            #showMore {
+                display: none;
+            }
+
+            button.splide__arrow--prev {
+                left: -50px;
+                svg {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0%
+                        0% no-repeat padding-box;
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 14px;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    width: 70px;
+                }
+            }
+
+            .box {
+                box-shadow: 0px 0px 16px #0000001a;
+                margin: 30px;
+                max-width: 300px;
+                padding: 0 30px;
+                text-align: center;
+                height: 100px;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+
+                    width: 70%;
+                }
+            }
+            .splide__slide.is-visible {
+                opacity: 1;
+            }
+
+            button.splide__arrow--next {
+                right: -50px;
+                svg {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0%
+                        0% no-repeat padding-box;
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 14px;
+                    position: absolute;
+                    width: 70px;
+                }
+            }
+            .splide__pagination {
+                display: none;
+            }
+        }
+    }
+    div.feed {
+        background-color: $grey-back;
+        .container {
+            margin: 0 auto;
+            .title {
+                margin: 50px auto;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                .green {
+                    font: normal normal 800 16px/16px Nunito;
+                    letter-spacing: 0px;
+                    color: $green;
+                }
+                span {
+                    font: normal normal 800 35px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+                p {
+                    font: normal normal normal 16px/22px Nunito;
+                    letter-spacing: 0.48px;
+                    width: 70%;
+                    margin: 20px auto;
+                }
+            }
+            .feedslide {
+                position: relative;
+                padding-bottom: 100px;
+            }
+            .splide__pagination__page {
+                background: $black-txt;
+                border: none;
+                border-radius: 2.5px;
+                display: inline-block;
+                height: 5px;
+                margin: 10px;
+                padding: 0;
+                transition: all 0.2s linear;
+                width: 56px;
+            }
+            button.splide__arrow--next {
+                right: 0%;
+                border: 0px solid;
+                text-align: left;
+                svg {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0%
+                        0% no-repeat padding-box;
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 14px;
+                    position: absolute;
+                    width: 70px;
+                }
+            }
+            button.splide__arrow--prev {
+                left: 0px;
+                svg {
+                    display: none;
+                }
+                &::after {
+                    content: "";
+                    background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0%
+                        0% no-repeat padding-box;
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 14px;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    width: 70px;
+                }
+            }
+            #splide3 {
+                position: relative;
+                .box {
+                    background: #ffffff 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 0px 16px #44444440;
+                    width: 80%;
+                    margin: 100px auto;
+                    position: relative;
+                    .avatar {
+                        text-align: center;
+                        background: #ffffff 0% 0% no-repeat padding-box;
+                        width: 100px;
+                        top: -50px;
+                        position: relative;
+                        margin: 0 auto;
+                        height: 100px;
+                        border: 2px $green solid;
+                        border-radius: 89px;
+                        overflow: hidden;
+                        img {
+                            width: 70%;
+
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            -webkit-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    .quote {
+                        text-align: center;
+                        height: 32px;
+                        top: -25px;
+                        position: relative;
+                        margin: 0 auto;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                    .txt {
+                        text-align: center;
+                        font: normal normal normal 16px/22px Nunito;
+                        letter-spacing: 0px;
+                        color: $grey-txt;
+                    }
+                    .nick {
+                        text-align: center;
+                        font: normal normal 600 16px/22px Nunito;
+                        letter-spacing: 0px;
+                        color: $black-txt;
+                        padding: 40px 0;
+                    }
+                }
+            }
+        }
+        .splide__pagination__page.is-active {
+            background: $green;
+        }
+    }
+    div.steps {
+        .container-title {
+            justify-content: unset;
+            width: 50%;
+            margin: 0 0 0 auto;
+
+            .title {
+                .green {
+                    font: normal normal 800 16px/16px Nunito;
+                    letter-spacing: 0px;
+                }
+                span {
+                    font: normal normal 800 35px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            .image {
+                display: flex;
+                width: 500px;
+                justify-content: space-between;
+
+                img {
+                    height: 1060px;
+                    width: auto;
+                }
+            }
+            .step {
+                width: 50%;
+                .timeline-body {
+                    margin-left: 60px;
+                    width: 50%;
+                    p {
+                        font: normal normal normal 16px/22px Nunito;
+                        letter-spacing: 0.48px;
+                    }
+                    .timeline-title {
+                        margin-bottom: 20px;
+                        .badge {
+                            font: normal normal 800 20px/32px Nunito;
+                            letter-spacing: 0px;
+                        }
+                    }
+                }
+                .timeline-icon {
+                    height: 100px;
+                    width: 100px;
+
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+
+                        width: auto;
+                    }
+
+                    &::before {
+                        bottom: -60%;
+                        left: 40%;
+                    }
+                    span {
+                        font: normal normal 600 17px/28px Poppins;
+                    }
+                }
+                .cta {
+                    background-color: $green;
+                    border: 0 solid;
+                    border-radius: 5px;
+                    color: #fbfbfb;
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 600;
+                    height: 40px;
+                    letter-spacing: 0.28px;
+                    line-height: 21px;
+                    line-height: 40px;
+                    text-align: center;
+                    width: 160px;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+    div.gallery {
+        margin: 100px 0;
+        .container {
+            .title {
+                .green {
+                    font: normal normal 800 16px/16px Nunito;
+                    letter-spacing: 0px;
+                }
+                span {
+                    font: normal normal 800 35px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 5vw);
+                margin: 0 auto;
+                width: 70%;
+                grid-gap: 30px;
+                .gallery-img {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .item-1 {
+                    grid-column-end: 2;
+                    grid-column-start: 1;
+                    grid-row-end: 3;
+                    grid-row-start: 1;
+                }
+                .item-2 {
+                    grid-column-end: 3;
+                    grid-column-start: 2;
+                    grid-row-end: 3;
+                    grid-row-start: 1;
+                }
+                .item-3 {
+                    grid-column-end: 5;
+                    grid-column-start: 3;
+                    grid-row-end: 6;
+                    grid-row-start: 1;
+                    display: block;
+                }
+                .item-4 {
+                    grid-column-end: 3;
+                    grid-column-start: 1;
+                    grid-row-end: 6;
+                    grid-row-start: 3;
+                }
+                .item-5 {
+                    grid-column-end: 6;
+                    grid-column-start: 5;
+                    grid-row-end: 6;
+                    grid-row-start: 3;
+                    display: block;
+                }
+                .item-6 {
+                    grid-column-end: 6;
+                    grid-column-start: 5;
+                    grid-row-end: 3;
+                    grid-row-start: 1;
+                    display: block;
+                }
+                .title {
+                    text-align: center;
+                    .green {
+                        font: normal normal 800 16px/16px Nunito;
+                        letter-spacing: 0px;
+                    }
+                    span {
+                        font: normal normal 800 35px/65px Nunito;
+                        letter-spacing: 0px;
+                    }
+                }
+            }
+            #loadMore2 {
+                a {
+                    font: normal normal normal 16px/24px Nunito;
+                    color: $grey-txt;
+                    letter-spacing: 0.48px;
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    text-align: center;
+                    width: 15%;
+                    text-align: center;
+                    justify-content: space-evenly;
+                    margin: 30px auto;
+                    text-decoration: none;
+                    div.arrow {
+                        width: 9px;
+                        height: 9px;
+                        box-sizing: border-box;
+                        top: 5px;
+                        transform: rotate(135deg);
+                        display: inline-block;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            border-width: 0.2vmin 0.2vmin 0 0;
+                            border-style: solid;
+                            border-color: $green;
+                            transition: 0.2s ease;
+                            display: block;
+                            transform-origin: 100% 0;
+                        }
+
+                        &:after {
+                            content: "";
+                            float: left;
+                            position: relative;
+                            top: -100%;
+                            width: 100%;
+                            height: 100%;
+                            border-width: 0 0.2vmin 0 0;
+                            border-style: solid;
+                            border-color: $green;
+                            transform-origin: 100% 0;
+                            transition: 0.2s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.money {
+        background-position: center right;
+        .container {
+            .title {
+                width: 50vw;
+                .green {
+                    font: normal normal 800 16px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+                span {
+                    font: normal normal 800 35px/45px Nunito;
+                    letter-spacing: 0px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font: normal normal 600 16px/22px Nunito;
+                    letter-spacing: 0.48px;
+                    margin: 0;
+                }
+                .cta {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    div.talk {
+        background-position: top;
+        background-size: cover;
+
+        .container {
+            width: 50%;
+            .title {
+                .green {
+                    font: normal normal 800 16px/16px Nunito;
+                    letter-spacing: 0px;
+                }
+                span {
+                    font: normal normal 800 40px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+                p {
+                    font: normal normal normal 16px/24px Nunito;
+                    letter-spacing: 0.48px;
+                }
+            }
+            .formflex {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .form-group {
+                    width: 45%;
+                }
+            }
+            .wpcf7-submit {
+                padding: 0;
+            }
+            .wpcf7-list-item {
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                text-align: left;
+                width: 90%;
+            }
+            input[type="checkbox"] + span:before {
+                border: 1px solid #444;
+                border-radius: 0;
+                content: "";
+                display: block;
+                height: 20px;
+                left: -45px;
                 position: absolute;
-                top: 10px;
+                top: 5px;
+                width: 20px;
             }
-            div.three {
-                grid-area: three;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.four {
-                grid-area: four;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.one {
-                grid-area: one;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.two {
-                grid-area: two;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.five {
-                grid-area: five;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.six {
-                grid-area: six;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.seven {
-                grid-area: seven;
-                .icon {
-                    @include icons;
-                }
-            }
-            div.eight {
-                grid-area: eight;
-                .icon {
-                    @include icons;
-                }
+            input[type="checkbox"] + span:after {
+                left: -45px;
             }
         }
     }
