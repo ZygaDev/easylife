@@ -9,6 +9,11 @@
 @import "footer/main.scss";
 @import "services/main.scss";
 @import "fotowoltaika/main.scss";
+@import "realizacje/main.scss";
+@import "ask/main.scss";
+@import "baza/main.scss";
+@import "contact/main.scss";
+@import "posts/main.scss";
 
 body {
     font-family: "Nunito", sans-serif;
@@ -19,22 +24,6 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 .container {
-    width: 90%;
     margin: 0 auto;
-}
-@media (max-width: 999px) {
-    .mobile {
-        display: block;
-    }
-    .desktop {
-        display: none;
-    }
-}
-@media (min-width: 1000px) {
-    .mobile {
-        display: none;
-    }
-    .desktop {
-        display: block;
-    }
+    width: 90%;
 }

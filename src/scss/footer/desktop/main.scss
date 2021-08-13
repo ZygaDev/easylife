@@ -1,4 +1,4 @@
-@media (min-width: 1000px) {
+@media (min-width: 1030px) {
     footer {
         div.container {
             p {
@@ -20,6 +20,9 @@
                             letter-spacing: 0.48px;
                             color: black;
                             text-decoration: none;
+                            &:hover {
+                                border-bottom: 3px solid $green;
+                            }
                         }
                     }
                 }
@@ -40,6 +43,11 @@
             }
             img {
                 vertical-align: top;
+            }
+            .adres {
+                p {
+                    width: 100%;
+                }
             }
         }
     }

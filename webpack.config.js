@@ -27,6 +27,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
+            jquery: "jquery",
         }),
         // new BrowserSyncPlugin({
         //     host: "localhost",
@@ -39,10 +40,18 @@ module.exports = {
             {
                 test: /\.(js)$/,
                 exclude: /node_modules/,
-                use: ["babel-loader", "eslint-loader"],
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: { presets: ["@babel/preset-env"] },
+                    },
+                    {
+                        loader: "eslint-loader",
+                    },
+                ],
             },
             {
-                test: /\.(sass|scss)$/,
+                test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -79,5 +88,11 @@ module.exports = {
     optimization: {
         minimize: true,
         minimizer: [new CssMinimizerPlugin()],
+    },
+    resolve: {
+        alias: {
+            // bind to modules;
+            modules: path.join(__dirname, "node_modules"),
+        },
     },
 };

@@ -1,20 +1,13 @@
 .fotowoltaika {
-    height: 80vh;
     .back {
-        content: "";
-        background: linear-gradient(180deg, #4d7d1f7d 0%, #385e1300 100%),
-            url("../dist/images/services/Group517@2x.png") 0% 0% no-repeat padding-box;
-        height: 90vh;
-        background-size: cover;
-        position: relative;
-        top: -10vh;
-        width: 50%;
-        background-position: -35px;
-        text-align: right;
-        float: right;
+        display: none;
     }
     .breadcrumbs {
         margin-top: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 200px;
         span {
             font: normal normal normal 10px/24px Lato;
             letter-spacing: 0.3px;
@@ -22,41 +15,643 @@
         }
     }
     span.green {
-        font: normal normal bold 13px/24px Nunito;
+        font: normal normal bold 16px/24px Nunito;
         letter-spacing: 0.39px;
         color: $green;
         display: block;
         margin-top: 25px;
     }
     span {
-        font: normal normal bold 18px/36px Nunito;
+        font: normal normal bold 18px/26px Nunito;
         letter-spacing: 0.65px;
+        display: block;
     }
 
-    .main {
-        .container {
-            position: absolute;
-            top: 60%;
-            transform: translateY(-60%);
-            left: 5%;
-            // margin-top: 130px;
-            span {
-                font-size: 55px;
-                line-height: 65px;
-                font-weight: 900;
+    .container {
+        // margin-top: 160px;
+
+        ul {
+            li {
+                margin-top: 16px;
+                a {
+                    font: normal normal 600 16px/24px Nunito;
+                    letter-spacing: 0.42px;
+                    color: $black-txt;
+                    text-decoration: none;
+                }
             }
-            ul {
-                li {
-                    margin-top: 16px;
-                    a {
-                        font: normal normal 600 14px/24px Nunito;
-                        letter-spacing: 0.42px;
-                        color: $black-txt;
-                        text-decoration: none;
+        }
+        p {
+            font: normal normal normal 16px/24px Nunito;
+            letter-spacing: 0.39px;
+            margin-top: 50px;
+        }
+        .cta {
+            background-color: $white;
+            border: 1px solid $green;
+            border-radius: 5px;
+            color: $green;
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            height: 40px;
+            letter-spacing: 0.28px;
+            line-height: 40px;
+            padding: 0;
+            text-align: center;
+            width: 150px;
+            cursor: pointer;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            &:hover {
+                box-shadow: 0px 0px 16px #0000001a;
+            }
+        }
+        .splide__track {
+            ul.splide__list {
+                max-height: 160px;
+            }
+        }
+        .splide__pagination {
+            display: none;
+        }
+        button.splide__arrow--next {
+            right: 55%;
+            border: 0px solid;
+            text-align: left;
+            svg {
+                display: none;
+            }
+            &::after {
+                content: "";
+                background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0% 0%
+                    no-repeat padding-box;
+                position: absolute;
+                background-position: center;
+                background-size: contain;
+                content: "";
+                height: 16px;
+                position: absolute;
+                width: 70px;
+            }
+        }
+        button.splide__arrow--prev {
+            left: 7%;
+            border: 0px solid;
+            text-align: left;
+            svg {
+                display: none;
+            }
+            &::after {
+                content: "";
+                background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0% 0%
+                    no-repeat padding-box;
+                position: absolute;
+                background-position: center;
+                background-size: contain;
+                content: "";
+                height: 16px;
+                position: absolute;
+                transform: rotate(180deg);
+                width: 70px;
+            }
+        }
+        .splide__arrow {
+            top: 110%;
+        }
+    }
+    .showLess {
+        color: #676767;
+        cursor: pointer;
+        display: flex;
+        font: normal normal normal 16px/24px Nunito;
+        justify-content: space-between;
+        letter-spacing: 0.48px;
+        position: relative;
+        width: 160px;
+        margin: 10px 0;
+        div.arrow {
+            width: 9px;
+            height: 9px;
+            box-sizing: border-box;
+            position: relative;
+            top: 10px;
+            transform: rotate(-45deg);
+            display: inline-block;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-width: 2px 2px 0 0;
+                border-style: solid;
+                border-color: $green;
+                transition: 0.2s ease;
+                display: block;
+                transform-origin: 100% 0;
+            }
+
+            &:after {
+                content: "";
+                float: left;
+                position: relative;
+                top: -100%;
+                width: 100%;
+                height: 100%;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                border-color: $green;
+                transform-origin: 100% 0;
+                transition: 0.2s ease;
+            }
+        }
+    }
+    .loadMore {
+        color: #676767;
+        cursor: pointer;
+        display: flex;
+        font: normal normal normal 16px/24px Nunito;
+        justify-content: space-between;
+        letter-spacing: 0.48px;
+        position: relative;
+        width: 160px;
+        margin: 10px 0;
+        .arrow {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 9px;
+            position: relative;
+            top: 5px;
+            transform: rotate(135deg);
+            width: 9px;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-width: 2px 2px 0 0;
+                border-style: solid;
+                border-color: $green;
+                transition: 0.2s ease;
+                display: block;
+                transform-origin: 100% 0;
+            }
+
+            &:after {
+                content: "";
+                float: left;
+                position: relative;
+                top: -100%;
+                width: 100%;
+                height: 100%;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                border-color: $green;
+                transform-origin: 100% 0;
+                transition: 0.2s ease;
+            }
+        }
+    }
+    .function {
+        img {
+            max-width: 100%;
+        }
+        p {
+            margin: 20px 0;
+        }
+        .accord {
+            width: 100%;
+        }
+        .ui-accordion .ui-accordion-content {
+            padding: 0;
+            font: normal normal normal 16px/24px Nunito;
+            letter-spacing: 0.39px;
+            display: none;
+        }
+    }
+    .benefits {
+        div.title {
+            font: normal normal bold 18px/36px Nunito;
+            letter-spacing: 0.65px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .extra {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 100px;
+            .icon {
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                img {
+                    max-height: 30px;
+                    width: auto;
+                }
+            }
+            span {
+                font: normal normal normal 16px/18px Nunito;
+                letter-spacing: 0.48px;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+    .rest {
+        margin: 50px auto;
+        .title {
+            width: 90%;
+            margin: 0px auto;
+            span {
+                width: 150px;
+                display: block;
+            }
+        }
+
+        .diff {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 100px;
+            a {
+                text-decoration: none;
+                color: $black;
+                text-align: center;
+                .icon {
+                    margin-top: 30px;
+                    img {
+                        width: 80%;
                     }
                 }
             }
         }
     }
-    @include phone-mobile;
+}
+div.fotowoltaika-main {
+    .back {
+        display: none;
+    }
+    div.breadcrumbs {
+        margin-top: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 320px;
+
+        span {
+            font-size: 16px !important;
+            letter-spacing: 0.3px;
+            color: $grey-cta;
+        }
+    }
+    span.green {
+        font: normal normal bold 16px/24px Nunito;
+        letter-spacing: 0.39px;
+        color: $green;
+        display: block;
+        margin-top: 25px;
+    }
+    span {
+        font: normal normal bold 18px/26px Nunito;
+        letter-spacing: 0.65px;
+        display: block;
+    }
+    p {
+        font: normal normal normal 16px/24px Nunito;
+        letter-spacing: 0.39px;
+        margin-top: 50px;
+    }
+    .cta {
+        background-color: $white;
+        border: 1px solid $green;
+        border-radius: 5px;
+        color: $green;
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        height: 40px;
+        letter-spacing: 0.28px;
+        line-height: 40px;
+        padding: 0;
+        text-align: center;
+        width: 150px;
+        cursor: pointer;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        &:hover {
+            box-shadow: 0px 0px 16px #0000001a;
+        }
+    }
+}
+.calculator {
+    background-color: $white-menu;
+    padding: 30px 0;
+    .title {
+        p {
+            margin: 30px 0;
+        }
+    }
+    .calc {
+        .choosen {
+            position: absolute;
+        }
+        p {
+            display: flex;
+        }
+
+        --slider-handle-size: 14px;
+        --slider-handle-border-radius: 2px;
+        --slider-handle-margin-top: -4px;
+        --slider-track-height: 6px;
+        --slider-track-border-radius: 4px;
+
+        #wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #sliderContainer {
+            width: 100%;
+        }
+
+        .tick-slider-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tick-slider-header > h5 {
+            margin: 0;
+
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .tick-slider {
+            position: relative;
+            height: 100px;
+            width: 100%;
+        }
+
+        .tick-slider-value-container {
+            position: relative;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 12px;
+
+            font-size: 18px;
+        }
+
+        .tick-slider-value {
+            position: absolute;
+            border: 2px solid $green;
+            font-weight: bold;
+            width: 100px;
+            top: 20px;
+            text-align: center;
+            background-color: $white-menu;
+
+            border-radius: var(--slider-handle-border-radius);
+            div {
+                animation: bulge 0.3s ease-out;
+                padding: 5px 0;
+            }
+        }
+        .tick-slider-value :before,
+        .tick-slider-value :after {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+        .speech :before {
+            left: 33px;
+            top: -24px;
+            z-index: 9;
+            border: 15px solid;
+            border-color: transparent transparent $white-menu transparent;
+        }
+        .speech :after {
+            top: -24px;
+            left: 36px;
+            border: 12px solid;
+            border-color: transparent transparent $green transparent;
+        }
+
+        .tick-slider-background,
+        .tick-slider-progress,
+        .tick-slider-tick-container {
+            position: absolute;
+            top: 30px;
+            left: 0;
+
+            height: 3px;
+
+            pointer-events: none;
+
+            border-radius: var(--slider-track-border-radius);
+
+            z-index: 0;
+        }
+
+        .tick-slider-background {
+            width: 100%;
+            background-color: $grey-txt;
+            height: 1px;
+        }
+
+        .tick-slider-progress {
+            background-color: $grey-txt;
+            height: 3px;
+        }
+
+        .tick-slider-tick-container {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 calc(var(--slider-handle-size) / 2);
+        }
+
+        .tick-slider-tick {
+            width: 0px;
+            height: 0px;
+        }
+
+        .tick-slider-label {
+            opacity: 0.85;
+            transition: opacity 0.1s ease;
+        }
+
+        .tick-slider-label.hidden {
+            opacity: 1;
+        }
+
+        @keyframes bulge {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /*
+
+            REMOVE SLIDER STYLE DEFAULTS
+
+        */
+        input[type="range"] {
+            -webkit-appearance: none;
+
+            width: 100%;
+            height: 100%;
+            margin: 5px 0;
+            outline: none;
+            position: absolute;
+            top: -22px;
+            width: 100%;
+
+            background: transparent;
+
+            position: absolute;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+
+            border: none;
+        }
+
+        input[type="range"]:focus {
+            outline: none;
+        }
+
+        input[type="range"]::-moz-focus-outer {
+            border: 0;
+        }
+
+        /*
+
+            HANDLE
+
+        */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+
+            width: 10px;
+            height: 10px;
+
+            background: $grey-txt;
+
+            border-radius: 35px;
+
+            cursor: pointer;
+
+            margin-top: var(--slider-handle-margin-top);
+
+            -webkit-transform: scale(1);
+            transform: scale(1);
+
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        input[type="range"]:hover::-webkit-slider-thumb,
+        input[type="range"]:focus::-webkit-slider-thumb {
+            transform: scale(1.2);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            -webkit-appearance: none;
+
+            width: 10px;
+            height: 10px;
+
+            background: $grey-txt;
+
+            border-radius: 35px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        input[type="range"]:hover::-moz-range-thumb,
+        input[type="range"]:focus::-moz-range-thumb {
+            transform: scale(1.2);
+        }
+
+        /*
+
+            TRACK
+
+        */
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: var(--slider-track-height);
+
+            cursor: pointer;
+
+            background: none;
+
+            border-radius: var(--slider-track-border-radius);
+        }
+
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: var(--slider-track-height);
+
+            cursor: pointer;
+
+            background: none;
+
+            border-radius: var(--slider-track-border-radius);
+        }
+
+        input[type="range"]:focus::-webkit-slider-runnable-track {
+            background: none;
+        }
+        input[type="range"]:active::-webkit-slider-runnable-track {
+            background: none;
+        }
+    }
+    .result {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-evenly;
+        height: 130px;
+        background-color: $white;
+        box-shadow: 0px 0px 16px #0000001a;
+        margin: 20px 0;
+        width: 100%;
+        div {
+            width: 90%;
+            margin: 10px auto;
+            text-align: left;
+            .res {
+                font-weight: 700;
+            }
+        }
+    }
+    p.small-title {
+        font: normal normal 600 16px/24px Nunito;
+        text-align: center;
+    }
+}
+.talk {
+    form {
+        span {
+            font: 16px/26px Nunito !important;
+        }
+    }
 }

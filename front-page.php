@@ -12,10 +12,7 @@ if( $hero ): ?>
 
 
 <div class="hero">
-    <div class="back"><img src="<?php echo esc_url( $hero['zdjecie']['url'] ); ?>"
-            alt="<?php echo esc_attr( $hero['zdjecie']['alt'] ); ?>" />
-    </div>
-    <div class="container">
+    <div class="container main">
         <span class="green">
             <?php echo esc_attr( $hero['tytul_zielony'] ); ?>
             <br>
@@ -26,32 +23,32 @@ if( $hero ): ?>
         <div class="cta-hero">
             <button class="cta"> <?php echo esc_attr( $hero['przycisk_zielony'] ); ?>
             </button>
-            <div class="video">
+            <button class="video">
                 <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"
                     viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                     <path class="stroke-solid" fill="none" stroke="#444444" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
-        C97.3,23.7,75.7,2.3,49.9,2.5" />
+                        C97.3,23.7,75.7,2.3,49.9,2.5" />
                     <path class="icon" fill="#6fbc25"
                         d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z" />
                 </svg>
                 <span> <?php echo esc_attr( $hero['material_wideo'] ); ?>
                 </span>
-            </div>
-        </div>
-    </div><?php endif; ?>
-    <?php
-    $phone = get_field('telefon');
-    if( $phone ): ?>
-    <div class="phone">
-        <div class="green"></div>
-        <div class="white">
-            <div class="call"> <?php echo esc_attr( $phone['numer'] ); ?></div>
-            <div class="btn"> <?php echo esc_attr( $phone['przycisk_tekst'] ); ?></div>
+            </button>
         </div>
     </div>
-    <?php endif; ?>
+    <div class="back">
+        <img class="desktop" src="<?php echo esc_url( $hero['zdjecie']['url'] ); ?>"
+            alt="<?php echo esc_attr( $hero['zdjecie']['alt'] ); ?>" />
+        <img class="mobile" src="<?php echo esc_url( $hero['zdjecie_mobile']['url'] ); ?>"
+            alt="<?php echo esc_attr( $hero['zdjecie_mobile']['alt'] ); ?>" />
+    </div>
+    <div class="desc">
+
+    </div><?php endif; ?>
+
 </div>
+
 
 <?php
     $second = get_field('druga_sekcja');
@@ -99,24 +96,27 @@ $repeaters = $group['kafelki'];?>
     <div class="container">
         <img src="<?php echo esc_url( $group['zdjecie']['url'] ); ?>"
             alt="<?php echo esc_attr( $group['zdjecie']['alt'] ); ?>" />
-        <div class="title">
-            <span class="green"><?php echo esc_attr( $group['tytul_zielony'] ); ?></span>
-            <span><?php echo esc_attr( $group['tytul_czarny'] ); ?></span>
-        </div>
-        <div class="square">
-            <?php
-
-
-foreach($repeaters as $repeater) {
-   ?> <div class="sqr ">
-                <div class="icon"><img src="<?php echo esc_url( $repeater['ikona']['url'] ); ?>"
-                        alt="<?php echo esc_attr( $repeater['ikona']['alt'] ); ?>" /></div>
-                <div class="txt"><?php echo $repeater["tekst"] ?></div>
+        <div class="box">
+            <div class="title">
+                <span class="green"><?php echo esc_attr( $group['tytul_zielony'] ); ?></span>
+                <span><?php echo esc_attr( $group['tytul_czarny'] ); ?></span>
             </div>
-            <?php }
+            <div class="square">
+                <?php
 
-?>
+                $i = 0;
+                foreach($repeaters as $repeater) {
+                ?> <div class="sqr sqr<?php echo $i++ ?>">
+                    <div class="icon"><img src="<?php echo esc_url( $repeater['ikona']['url'] ); ?>"
+                            alt="<?php echo esc_attr( $repeater['ikona']['alt'] ); ?>" /></div>
+                    <div class="txt"><?php echo $repeater["tekst"] ?></div>
+                </div>
+                <?php }
+
+                ?>
+            </div>
         </div>
+
     </div>
 
 </div>
@@ -125,8 +125,11 @@ $offer = get_field('sekcja_czwarta');
 $images = $offer['slider'];
 ?>
 <div class="our_offer">
-    <div class="container">
-        <div class="title">
+
+    <div class="title">
+        <div class="container">
+
+
             <span class="green"><?php echo esc_attr( $offer['tytul_zielony'] ); ?></span>
             <span><?php echo esc_attr( $offer['tytul_czarny'] ); ?></span>
 
@@ -135,28 +138,29 @@ $images = $offer['slider'];
 
             <a href="/nasze-uslugi"> <button class="cta"><?php echo esc_attr( $offer['przycisk'] ); ?></button></a>
         </div>
+    </div>
 
-        <div id="splide2" class="splide">
-            <div class="splide__track">
+    <div id="splide2" class="splide">
+        <div class="splide__track">
 
-                <?php
+            <?php
 
                 if( $images ): ?>
-                <ul class="splide__list">
-                    <?php foreach( $images as $image ): ?>
-                    <li class="splide__slide">
+            <ul class="splide__list">
+                <?php foreach( $images as $image ): ?>
+                <li class="splide__slide">
 
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 
 
-                    </li>
-                    <?php endforeach; ?>
-                </ul>
-                <?php endif; ?>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
 
-            </div>
         </div>
     </div>
+
 </div>
 <?php
 $collab = get_field('sekcja_piata');
@@ -256,14 +260,7 @@ $repeatersfeed = $feed['opinie'];?>
 $steps = get_field('sekcja_siodma');
 $repeaterssteps = $steps['etapy'];?>
 <div class="steps">
-    <div class="container-title">
-        <div class=""></div>
-        <div class="title">
-            <span class="green"><?php echo $steps["zielony_tytul"] ?></span>
-            <span><?php echo $steps["czarny_tytul"] ?></span>
 
-        </div>
-    </div>
     <div class="container">
         <div class="image">
             <img src="<?php echo esc_url( $steps['zdjecie_1']['url'] ); ?>"
@@ -272,7 +269,14 @@ $repeaterssteps = $steps['etapy'];?>
                 alt="<?php echo esc_attr( $steps['zdjecie_2']['alt'] ); ?>" />
         </div>
         <div class="step">
+            <div class="container-title">
+                <div class=""></div>
+                <div class="title">
+                    <span class="green"><?php echo $steps["zielony_tytul"] ?></span>
+                    <span><?php echo $steps["czarny_tytul"] ?></span>
 
+                </div>
+            </div>
             <div class="timeline">
                 <?php
 
@@ -302,71 +306,66 @@ foreach($repeaterssteps as $repeaterstep) {
     </div>
 </div>
 </div>
+<?php
+
+$gallery = get_field('sekcja_osma');
+$images = $gallery['galeria'];?>
 <div class="gallery">
     <div class="container">
         <div class="title">
-            <span class="green">Galeria</span>
-            <span>Przykładowe realizacje</span>
+            <span class="green"><?php echo $gallery["zielony_tytul"] ?></span>
+            <span><?php echo $gallery["czarny_tytul"] ?></span>
 
         </div>
         <div class="container">
-            <div class="gallery-img item-1">
-                <img class=" "
-                    src="<?php bloginfo('template_directory'); ?>/dist/images/homepage/mobile/NoPath — kopia (18).png"
-                    alt="slider offer">
-            </div>
-            <div class="gallery-img item-2">
-                <img class=" "
-                    src="<?php bloginfo('template_directory'); ?>/dist/images/homepage/mobile/NoPath — kopia (12).png"
-                    alt="slider offer">
-            </div>
-            <div class="gallery-img item-3">
-                <img class=" "
-                    src="<?php bloginfo('template_directory'); ?>/dist/images/homepage/mobile/NoPath — kopia (14).png"
-                    alt="slider offer">
-            </div>
-            <div class="gallery-img item-4">
-                <img class=" "
-                    src="<?php bloginfo('template_directory'); ?>/dist/images/homepage/mobile/NoPath — kopia (13).png"
-                    alt="slider offer">
-            </div>
-            <div class="gallery-img item-5">
-                <img class=" "
-                    src="<?php bloginfo('template_directory'); ?>/dist/images/homepage/mobile/NoPath — kopia (21).png"
-                    alt="slider offer">
-            </div>
-            <div class="gallery-img item-6">
-                <img class=" "
-                    src="<?php bloginfo('template_directory'); ?>/dist/images/homepage/mobile/NoPath — kopia (23).png"
-                    alt="slider offer">
-            </div>
+            <?php
+
+if( $images ):
+            $a = 01;?>
+            <?php foreach( $images as $image ):
+
+$content = '  <div class="gallery-img item-'. $a++ .'">';
+            $content .= ' <a class="gallery_image" href=" '.$image['url'].' "> ';
+                $content .= ' <img src="'.$image['url'].' " alt="'. $image['alt'].'" />';
+                $content .= ' </a>';
+            $content .= ' </div>';
+        if ( function_exists('slb_activate') ){
+        $content = slb_activate($content);
+        }
+
+        echo $content;
+        ?>
+            <?php endforeach; ?>
+
+            <?php endif; ?>
+
         </div>
 
-        <div id="loadMore2" class="loadMore"><a href="/realizacje">Pokaż więcej <div class="arrow">
-                </div></a>
+        <div id="loadMore2" class="loadMore"><a href="/wszystkie-realizacje/"><span>Pokaż więcej </span>
+                <div class="arrow">
+                </div>
+            </a>
 
         </div>
 
     </div>
 </div>
+<?php
+
+$money = get_field('sekcja_dziewiata');
+$images = $money['zdjecie'];
+?>
 <div class="money">
+
     <div class="container">
+        <img src="<?php echo esc_url($images['url']); ?>" alt="<?php echo esc_attr($images['alt']); ?>" />
         <div class="title">
-            <span class="green">Pomoc</span>
-            <span>Potrzebujesz dofinansowania?</span>
+            <span class="green"><?php echo $money["zielony_tytul"] ?></span>
+            <span><?php echo $money["czarny_tytul"] ?></span>
 
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi minus ducimus enim iure numquam vitae,
-                tempora
-                fugiat reprehenderit? Saepe minus eaque blanditiis illo numquam dolore nisi sequi quas perferendis
-                totam?
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti odio, excepturi possimus
-                sapiente
-                voluptatibus. Corrupti quae temporibus sequi quasi omnis eaque? Error praesentium repellendus, at
-                ipsa
-                quidem doloribus enim!</p>
-            <button class="cta">Więcej informacji</button>
+            <p><?php echo $money["opis"] ?></p>
+            <button class="cta"><?php echo $money["przycisk"] ?></button>
         </div>
     </div>
 </div>

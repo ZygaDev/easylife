@@ -1,12 +1,10 @@
 <div class="talk">
+
     <div class="container">
         <div class="title">
-            <span class="green">Kontakt z nami</span>
-            <span>Porozmawiajmy o projekcie</span>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi minus ducimus enim iure numquam vitae,
-                tempora
-                fugiat reprehenderit? Saepe minus eaque blanditiis illo numquam dolore nisi sequi quas perferendis
-                totam?
+            <span class="green"><?php the_field('zielony_tytul_formularz', 'option'); ?></span>
+            <span><?php the_field('czarny_tytul_formularz', 'option'); ?></span>
+            <p><?php the_field('opis_formularz', 'option'); ?>
             </p>
         </div>
         <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]') ?>
@@ -30,22 +28,28 @@
                     <li class="white border"><a href="#">Kontakt</a></li>
                 </ul>
             </div>
-            <div class="adres">
-                <span>Adres</span>
-                <p>ul. Reja 4/29 (151,35 km) <br> 63-300 Pleszew</p>
+            <div class="adres"><span>Adres</span>
+                <p> <?php the_field('adres', 'option'); ?> </p>
+
+
+
+
                 <span>Godziny Otwarcia</span>
-                <p>Pon.-Pt. w godz. 8:00-16:00</p>
+                <p> <?php the_field('godziny', 'option'); ?>
+                </p>
             </div>
             <div class="">
                 <div class="contact"><span>Kontakt</span>
                     <p><span><img class=" " src="<?php bloginfo('template_directory'); ?>/dist/images/footer/email.png"
-                                alt="slider offer"></span>easy.life.oze@gmail.com</p>
+                                alt="slider offer"></span><?php the_field('email', 'option'); ?></p>
                     <p><span> <img class=" " src="<?php bloginfo('template_directory'); ?>/dist/images/footer/Call.svg"
-                                alt="slider offer"></span>(48) 505 701 847 lub (48) 880 110 553</p>
+                                alt="slider offer"></span><?php the_field('telefon', 'option'); ?></p>
                 </div>
-                <div class="social"><span>Obserwuj Nas</span>
-                    <p><span><img class=" " src="<?php bloginfo('template_directory'); ?>/dist/images/footer/Path 9.svg"
-                                alt="slider offer"></span>Facebook</p>
+                <div class="social"><span>Obserwuj Nas</span><a href="<?php the_field('facebook', 'option'); ?>">
+                        <p><span><img class=" "
+                                    src="<?php bloginfo('template_directory'); ?>/dist/images/footer/Path 9.svg"
+                                    alt="slider offer"></span>Facebook</p>
+                    </a>
                 </div>
             </div>
 

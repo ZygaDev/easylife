@@ -1,0 +1,113 @@
+.realizacjeblog {
+    .container {
+        .breadcrumbs {
+            margin-top: 17px;
+            span {
+                font: normal normal normal 10px/24px Lato;
+                letter-spacing: 0.3px;
+                color: $grey-cta;
+            }
+        }
+        .count {
+            font: normal normal 800 22px/36px Nunito;
+            letter-spacing: 0.79px;
+            color: $green;
+        }
+        span.green {
+            font: normal normal bold 13px/24px Nunito;
+            letter-spacing: 0.39px;
+            color: $green;
+            display: block;
+            margin-top: 25px;
+        }
+        span {
+            font: normal normal bold 18px/36px Nunito;
+            letter-spacing: 0.65px;
+        }
+
+        ul {
+            li {
+                margin: 50px auto;
+                cursor: pointer;
+                a {
+                    font: normal normal 600 16px/24px Nunito;
+                    letter-spacing: 0.42px;
+                    color: $black-txt;
+                    text-decoration: none;
+
+                    p {
+                        margin: 20px 0;
+                        font: normal normal normal 16px/24px Nunito;
+                        letter-spacing: 0.39px;
+                        display: none;
+                        &:nth-of-type(-n + 2) {
+                            display: block;
+                        }
+                    }
+                    .loadMore {
+                        text-align: left;
+                        margin-left: 0;
+                        justify-content: space-between;
+                    }
+                }
+                li {
+                    margin: 20px auto;
+                }
+                imG {
+                    width: 100%;
+                }
+                .splide__track {
+                    max-height: 160px;
+                }
+                .splide__pagination {
+                    display: none;
+                }
+                button.splide__arrow--next {
+                    right: 55%;
+                    border: 0px solid;
+                    text-align: left;
+                    svg {
+                        display: none;
+                    }
+                    &::after {
+                        content: "";
+                        background: transparent url(("./../dist/images/homepage/desktop/arrow.png"))
+                            0% 0% no-repeat padding-box;
+                        position: absolute;
+                        background-position: center;
+                        background-size: contain;
+                        content: "";
+                        height: 16px;
+                        position: absolute;
+                        width: 70px;
+                    }
+                }
+                button.splide__arrow--prev {
+                    left: 7%;
+                    border: 0px solid;
+                    text-align: left;
+                    svg {
+                        display: none;
+                    }
+                    &::after {
+                        content: "";
+                        background: transparent url(("./../dist/images/homepage/desktop/arrow.png"))
+                            0% 0% no-repeat padding-box;
+                        position: absolute;
+                        background-position: center;
+                        background-size: contain;
+                        content: "";
+                        height: 16px;
+                        position: absolute;
+                        transform: rotate(180deg);
+                        width: 70px;
+                    }
+                }
+                .splide__arrow {
+                    top: 110%;
+                }
+            }
+        }
+        @include phone-mobile;
+    }
+}

@@ -8,7 +8,7 @@
         position: fixed;
         right: 0;
         z-index: 999;
-
+        cursor: pointer;
         .green {
             background: transparent linear-gradient(90deg, #8fd24e 0%, #6fbc25 100%) 0% 0% no-repeat
                 padding-box;
@@ -48,6 +48,9 @@
                 font-size: 16px;
                 margin: 2px auto 15px;
                 text-align: center;
+                a {
+                    text-decoration: none;
+                }
             }
             .btn {
                 background-color: $green;
@@ -73,6 +76,7 @@
         position: fixed;
         right: 0;
         z-index: 999;
+        cursor: pointer;
 
         .green {
             background: transparent linear-gradient(90deg, #8fd24e 0%, #6fbc25 100%) 0% 0% no-repeat
@@ -146,4 +150,8 @@
     background-position: center;
     position: absolute;
     top: 10px;
+    img {
+        width: 100%;
+        position: relative;
+    }
 }

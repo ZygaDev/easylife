@@ -1,55 +1,79 @@
-@media (min-width: 1000px) {
-    div.hero {
-        background: none;
-        .back {
-            img {
-                width: 100%;
-                position: relative;
-            }
-            content: "";
-            // background: transparent
-            //     url("../dist/images/homepage/desktop/3d-rendering-entrance-modern-house@2x.png") 0%
-            //     0% no-repeat padding-box;
-            height: 100vh;
-            background-size: cover;
-            position: relative;
-            top: -10vh;
-            width: 50%;
-            background-position: right;
-            text-align: right;
-            float: right;
+@media (min-width: 1030px) {
+    div.back {
+        background-position: 50%;
+        background-size: cover;
+        content: "";
+        position: relative;
+        width: 50vw;
+        img {
+            height: auto;
+            width: 100%;
         }
-        .container {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 5%;
-            span {
-                font-size: 55px;
-                line-height: 65px;
-                font-weight: 900;
-            }
-            .cta-hero {
-                margin-top: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 30vw;
-
-                .cta {
-                    font-size: 16px;
-                    width: 160px;
-                }
-                .video {
-                    position: relative;
-                    bottom: 0;
-                    span {
-                        font-size: 16px;
-                        margin-left: 10px;
-                    }
-                }
-            }
-        }
-        @include phone;
     }
+    div.hero {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 0;
+        padding-top: 0;
+        z-index: 9;
+        position: relative;
+        max-height: 1000px;
+        .desc {
+            position: relative;
+            width: 50vw;
+            z-index: 9;
+        }
+        .back {
+            overflow: hidden;
+        }
+        .desktop {
+            display: block;
+        }
+    }
+    div.container.main {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 900px;
+        display: flex;
+        flex-direction: column;
+        z-index: 99;
+        span {
+            font-size: 55px;
+            line-height: 65px;
+            font-weight: 900;
+        }
+        .cta-hero {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            margin-right: 30px;
+            width: 400px;
+
+            .cta {
+                font-size: 16px;
+                width: 160px;
+                cursor: pointer;
+                cursor: pointer;
+                margin-right: 30px;
+                &:hover {
+                    box-shadow: 0px 0px 16px #0000001a;
+                }
+            }
+            .video {
+                position: relative;
+                bottom: 0;
+                background-color: transparent;
+                border: 0px;
+                span {
+                    font-size: 16px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    @include phone;
 }

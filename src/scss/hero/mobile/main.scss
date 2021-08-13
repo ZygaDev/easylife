@@ -3,98 +3,107 @@
     // background: transparent
     //     url("../dist/images/homepage/mobile/3d-rendering-entrance-modern-house1.png") 0% 0%
     //     no-repeat padding-box;
-    height: 87vh;
+    // height: 87vh;
     background-size: cover;
     img {
         width: 100%;
-        position: absolute;
     }
-    .container {
-        position: relative;
-        top: 0vh;
-        left: 0%;
-        height: 87vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        span {
-            font-size: 30px;
-            line-height: 45px;
-            font-weight: 700;
-            color: $black;
-            letter-spacing: 1.08px;
-        }
-        .green {
-            color: $green;
-        }
-        .cta-hero {
-            .cta {
-                font-size: 14px;
-                line-height: 21px;
-                height: 40px;
-                width: 150px;
-                color: $white;
-                letter-spacing: 0.28px;
-                border-radius: 5px;
-                border: 0px solid;
-                background-color: $green;
-
-                font-weight: 600;
-                line-height: 40px;
-                text-align: center;
-                display: block;
-            }
-            .video {
-                position: absolute;
-                bottom: 20px;
-                left: 0px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                @keyframes spin {
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-
-                .stroke-solid {
-                    stroke-dashoffset: 0;
-                    stroke-dasharray: 300;
-                    stroke-width: 4px;
-                    transition: stroke-dashoffset 1s ease, opacity 1s ease;
-                }
-
-                .icon {
-                    transform: scale(0.8);
-                    transform-origin: 50% 50%;
-                    transition: transform 200ms ease-out;
-                }
-                #play {
-                    cursor: pointer;
-                    bottom: 20px;
-                    width: 40px;
-                    height: 40px;
-                    &:hover {
-                        .stroke-solid {
-                            opacity: 1;
-                            stroke-dashoffset: 300;
-                        }
-                        .icon {
-                            transform: scale(0.9);
-                        }
-                    }
-                }
-
-                span {
-                    font-size: 14px;
-                    color: $black-txt;
-                    font-weight: 700;
-                    margin-left: 10px;
-                }
-            }
-        }
+    .desktop {
+        display: none;
     }
-
-    @include phone-mobile;
+    position: relative;
 }
+.container.main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    span {
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 700;
+        color: $black;
+        letter-spacing: 1.08px;
+    }
+    .green {
+        color: $green;
+    }
+    .cta-hero {
+        margin: 50px 0;
+        .cta {
+            font-size: 16px;
+            line-height: 21px;
+            height: 40px;
+            width: 150px;
+            color: $white;
+            letter-spacing: 0.28px;
+            border-radius: 5px;
+            border: 0px solid;
+            background-color: $green;
+            cursor: pointer;
+            font-weight: 600;
+            line-height: 40px;
+            text-align: center;
+            display: block;
+            &:hover {
+                box-shadow: 0px 0px 16px #0000001a;
+            }
+        }
+        .video {
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            border: 0px solid;
+            @keyframes spin {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .stroke-solid {
+                stroke-dashoffset: 0;
+                stroke-dasharray: 300;
+                stroke-width: 4px;
+                transition: stroke-dashoffset 1s ease, opacity 1s ease;
+            }
+
+            .icon {
+                transform: scale(0.8);
+                transform-origin: 50% 50%;
+                transition: transform 200ms ease-out;
+            }
+            #play {
+                cursor: pointer;
+                bottom: 20px;
+                width: 40px;
+                height: 40px;
+                &:hover {
+                    .stroke-solid {
+                        opacity: 1;
+                        stroke-dashoffset: 300;
+                    }
+                    .icon {
+                        transform: scale(0.9);
+                    }
+                }
+            }
+
+            span {
+                font-size: 16px;
+                color: $black-txt;
+                font-weight: 700;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+@include phone-mobile;

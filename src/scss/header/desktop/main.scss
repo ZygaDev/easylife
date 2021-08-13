@@ -1,6 +1,9 @@
 header {
-    height: 10vh;
-    @media (min-width: 1000px) {
+    height: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    @media (min-width: 1030px) {
         div.container {
             display: flex;
             flex-direction: inherit;
@@ -35,6 +38,9 @@ header {
                                 text-decoration: none;
                                 font-size: 16px;
                                 font-weight: bold;
+                                &:hover {
+                                    border-bottom: 3px solid $green;
+                                }
                             }
                         }
                         li.white {

@@ -8,7 +8,7 @@
         // background: transparent
         //     url(("../../dist/images/homepage/mobile/plant-tree-innovation-save-world.png")) 0% 0%
         //     no-repeat padding-box;
-        height: 90vw;
+        height: auto;
         width: 100vw;
         background-size: cover;
         background-position: center;
@@ -71,15 +71,19 @@
     background-size: cover;
     img {
         position: absolute;
-        width: 100%;
+        width: auto;
         height: 100%;
         left: 0%;
+    }
+    .box {
+        position: relative;
+        box-shadow: none;
     }
     .container {
         .title {
             display: flex;
             flex-direction: column;
-            width: 50vw;
+
             z-index: 9;
             margin: 50px 0;
             span {
@@ -108,116 +112,32 @@
 
             .sqr {
                 border: 2px solid $white-menu;
-                width: 35vw;
-                height: 35vw;
+                width: 110px;
+                height: 120px;
                 position: relative;
                 font: normal normal bold 13px/20px Nunito;
                 letter-spacing: 0.39px;
                 color: $white-menu;
-                padding: 10px;
-            }
-        }
-        div.one {
-            grid-area: one;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/quality.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .two {
-            grid-area: two;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/worker.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .three {
-            grid-area: three;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/arrow.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .four {
-            grid-area: four;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/hand.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .five {
-            grid-area: five;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/5years.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .six {
-            grid-area: six;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/pen.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .seven {
-            grid-area: seven;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/build.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
-            }
-        }
-        .eight {
-            grid-area: eight;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            .icon {
-                content: "";
-                background: transparent url(("../dist/images/homepage/mobile/calendar.svg")) 0% 0%
-                    no-repeat padding-box;
-                @include icons-mobile;
+                padding: 5px;
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 0 auto;
+                .icon {
+                    right: 10px;
+                    @include icons-mobile;
+                }
+                .txt {
+                    text-align: center;
+                    font: normal normal normal 16px/24px Nunito;
+                    letter-spacing: 0.39px;
+                }
             }
         }
     }
 }
 .our_offer {
-    .container {
-        .title {
+    .title {
+        .container {
             display: flex;
             flex-direction: column;
             margin-top: 30px;
@@ -243,7 +163,7 @@
             border-radius: 5px;
             color: $green;
             display: block;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             height: 40px;
             letter-spacing: 0.28px;
@@ -252,73 +172,73 @@
             text-align: center;
             width: 150px;
         }
-        .splide {
-            padding: 0;
-            margin: 30px auto;
-        }
-        button.splide__arrow--prev {
-            left: 0px;
-            border: 0px solid;
-            text-align: left;
-            svg {
-                display: none;
-            }
-            &::after {
-                content: "";
-                background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0% 0%
-                    no-repeat padding-box;
-                position: absolute;
-                background-position: center;
-                background-size: contain;
-                content: "";
-                height: 14px;
-                position: absolute;
-                transform: rotate(180deg);
-                width: 70px;
-            }
-        }
-
-        .splide__arrow {
-            top: 110%;
-        }
-
-        #splide2-list,
-        #splide2-track {
-            height: 100%;
-        }
-        button.splide__arrow--next {
-            right: 10%;
-            border: 0px solid;
-            text-align: left;
-            svg {
-                display: none;
-            }
-            &::after {
-                content: "";
-                background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0% 0%
-                    no-repeat padding-box;
-                position: absolute;
-                background-position: center;
-                background-size: contain;
-                content: "";
-                height: 14px;
-                position: absolute;
-                width: 70px;
-            }
-        }
-        .splide__slide {
-            img {
-                display: flex !important;
-                width: 100%;
-                height: auto;
-            }
-        }
-        .splide__pagination {
+    }
+    .splide {
+        padding: 0;
+        margin: 30px auto;
+    }
+    button.splide__arrow--prev {
+        left: 0px;
+        border: 0px solid;
+        text-align: left;
+        svg {
             display: none;
         }
+        &::after {
+            content: "";
+            background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0% 0%
+                no-repeat padding-box;
+            position: absolute;
+            background-position: center;
+            background-size: contain;
+            content: "";
+            height: 16px;
+            position: absolute;
+            transform: rotate(180deg);
+            width: 70px;
+        }
+    }
+
+    .splide__arrow {
+        top: 110%;
+    }
+
+    #splide2-list,
+    #splide2-track {
+        height: 100%;
+    }
+    button.splide__arrow--next {
+        right: 10%;
+        border: 0px solid;
+        text-align: left;
+        svg {
+            display: none;
+        }
+        &::after {
+            content: "";
+            background: transparent url(("./../dist/images/homepage/desktop/arrow.png")) 0% 0%
+                no-repeat padding-box;
+            position: absolute;
+            background-position: center;
+            background-size: contain;
+            content: "";
+            height: 16px;
+            position: absolute;
+            width: 70px;
+        }
+    }
+    .splide__slide {
+        img {
+            display: flex !important;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .splide__pagination {
+        display: none;
     }
 }
-@media (max-width: 999px) {
+@media (max-width: 1029px) {
     .collab {
         padding: 50px 0;
         .container {
@@ -358,10 +278,13 @@
         vertical-align: bottom;
         width: 80%;
     }
+    .splide__list {
+        margin: 0 auto !important;
+    }
     .box {
         text-align: center;
         margin: 30px auto;
-        max-width: 80%;
+        max-width: 100%;
         padding: 30px 0;
         box-shadow: 0px 0px 16px #0000001a;
     }
@@ -389,7 +312,7 @@
                 content: "";
                 width: 100%;
                 height: 100%;
-                border-width: 0.8vmin 0.8vmin 0 0;
+                border-width: 2px 2px 0 0;
                 border-style: solid;
                 border-color: $green;
                 transition: 0.2s ease;
@@ -404,7 +327,7 @@
                 top: -100%;
                 width: 100%;
                 height: 100%;
-                border-width: 0 0.8vmin 0 0;
+                border-width: 0 2px 0 0;
                 border-style: solid;
                 border-color: $green;
                 transform-origin: 100% 0;
@@ -439,7 +362,7 @@
                 content: "";
                 width: 100%;
                 height: 100%;
-                border-width: 0.8vmin 0.8vmin 0 0;
+                border-width: 2px 2px 0 0;
                 border-style: solid;
                 border-color: $green;
                 transition: 0.2s ease;
@@ -454,7 +377,7 @@
                 top: -100%;
                 width: 100%;
                 height: 100%;
-                border-width: 0 0.8vmin 0 0;
+                border-width: 0 2px 0 0;
                 border-style: solid;
                 border-color: $green;
                 transform-origin: 100% 0;
@@ -503,7 +426,7 @@
                     background-position: center;
                     background-size: contain;
                     content: "";
-                    height: 14px;
+                    height: 16px;
                     position: absolute;
                     width: 70px;
                 }
@@ -523,7 +446,7 @@
                     background-position: center;
                     background-size: contain;
                     content: "";
-                    height: 14px;
+                    height: 16px;
                     position: absolute;
                     transform: rotate(180deg);
                     width: 70px;
@@ -546,8 +469,14 @@
                     position: relative;
                     margin: 0 auto;
                     height: 100px;
+                    border: 2px $green solid;
+                    border-radius: 50%;
+                    line-height: 50px;
+                    overflow: hidden;
                     img {
                         width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
                     }
                 }
                 .quote {
@@ -562,7 +491,7 @@
                 }
                 .txt {
                     text-align: center;
-                    font: normal normal normal 13px/24px Nunito;
+                    font: normal normal normal 16px/24px Nunito;
                     letter-spacing: 0.39px;
                     color: $grey-txt;
                 }
@@ -605,18 +534,18 @@
     .timeline {
         position: relative;
         padding-left: 4rem;
-        margin: 0 0 0 30px;
+
         color: white;
-        .last {
-            .timeline-icon {
-                &::before {
-                    display: none;
-                }
-            }
+        max-width: 300px;
+        margin: 0 auto;
+
+        .cta {
+            display: none;
         }
         .timeline-container {
             position: relative;
-            margin-bottom: 2.5rem;
+            margin: 2.5rem auto;
+            max-width: 150px;
             .cta {
                 display: none;
             }
@@ -624,7 +553,7 @@
                 border-radius: 50%;
                 font-size: 2rem;
                 height: 70px;
-                left: -88px;
+                left: -110px;
                 position: absolute;
                 text-align: center;
                 top: 4px;
@@ -637,34 +566,14 @@
                     top: 17px;
                     width: auto;
                 }
-                &::before {
-                    content: "";
-                    background: transparent url(("../dist/images/homepage/mobile/Line343.svg")) 0%
-                        0% no-repeat padding-box;
-                    background-position: 50%;
-                    background-size: contain;
-                    content: "";
-                    height: 40px;
-                    width: 20px;
-                    position: absolute;
-                    bottom: -100%;
-                    left: 35%;
-                }
 
                 span {
                     color: $green;
                     position: absolute;
-                    font: normal normal 600 14px/23px Poppins;
+                    font: normal normal 600 16px/23px Poppins;
                     letter-spacing: 0px;
-                    right: -15px;
+                    right: -20px;
                     top: -7px;
-                }
-            }
-            &:last-of-type {
-                .timeline-icon {
-                    &::before {
-                        display: none;
-                    }
                 }
             }
 
@@ -691,6 +600,27 @@
                     font: normal normal normal 13px/24px Nunito;
                     letter-spacing: 0.39px;
                     color: $grey-txt;
+                }
+            }
+            &::before {
+                content: "";
+                background: transparent url(("../dist/images/homepage/mobile/Line343.svg")) 0% 0%
+                    no-repeat padding-box;
+                background-position: 50%;
+                background-size: contain;
+                content: "";
+
+                width: 20px;
+                position: absolute;
+
+                height: 40px;
+                left: -90px;
+                top: 50%;
+                transform: translate(50%, 50%);
+            }
+            &:last-of-type {
+                &::before {
+                    display: none;
                 }
             }
         }
@@ -728,6 +658,7 @@
                 text-align: center;
                 justify-content: space-evenly;
                 margin: 0 auto;
+                width: 100%;
                 div.arrow {
                     width: 9px;
                     height: 9px;
@@ -740,7 +671,7 @@
                         content: "";
                         width: 100%;
                         height: 100%;
-                        border-width: 0.8vmin 0.8vmin 0 0;
+                        border-width: 2px 2px 0 0;
                         border-style: solid;
                         border-color: $green;
                         transition: 0.2s ease;
@@ -755,7 +686,7 @@
                         top: -100%;
                         width: 100%;
                         height: 100%;
-                        border-width: 0 0.8vmin 0 0;
+                        border-width: 0 2px 0 0;
                         border-style: solid;
                         border-color: $green;
                         transform-origin: 100% 0;
@@ -806,21 +737,29 @@
     }
 }
 .money {
-    background: $grey-back url(("../../dist/images/homepage/mobile/Slider.png")) 0% 0% no-repeat
-        padding-box;
-    background-position: 64% 123%;
+    background-color: $grey-back;
+    position: relative;
+    z-index: 9;
     content: "";
     .container {
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            z-index: -1;
+        }
         .title {
             margin-top: 30px;
             margin-bottom: 30px;
             text-align: left;
             display: flex;
             flex-direction: column;
+
             span {
                 font: normal normal bold 18px/27px Nunito;
                 letter-spacing: 0.65px;
-                width: 50%;
+                width: 160px;
             }
             .green {
                 color: $green;
@@ -832,16 +771,16 @@
             font: normal normal normal 13px/24px Nunito;
             letter-spacing: 0.39px;
             margin-top: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 70px;
+            width: 100%;
         }
         .cta {
-            margin-bottom: 200px;
-            background-color: transparent;
+            background-color: $green;
             border: 1px solid $green;
             border-radius: 5px;
-            color: $green;
+            color: $white;
             display: block;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             height: 40px;
             letter-spacing: 0.28px;
@@ -849,18 +788,21 @@
             padding: 0;
             text-align: center;
             width: 150px;
+            cursor: pointer;
+            margin-bottom: 80px;
+            &:hover {
+                box-shadow: 0px 0px 16px #0000001a;
+            }
         }
     }
 }
 .talk {
     background: url(("../../dist/images/homepage/mobile/xxxxx.png")) 0% 0% no-repeat padding-box;
-    background-position: 100% 120%;
-    content: "";
-    background-size: 150%;
+    background-position: center;
+    background-size: auto;
     content: "";
 
     .container {
-        padding-bottom: 80px;
         .title {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -889,8 +831,8 @@
             background-color: transparent;
             border: 0px solid;
             outline: none;
-            width: 94%;
-            padding: 3%;
+            padding: 20px;
+            width: 90%;
         }
         input:active + .form-group,
         input:focus + .form-group,
@@ -925,13 +867,15 @@
             border-radius: 5px;
             color: #fbfbfb;
             display: block;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             height: 40px;
             letter-spacing: 0.28px;
             text-align: center;
-            width: 150px;
-            margin: 30px auto;
+            width: 170px;
+            line-height: inherit;
+            padding: 0;
+            margin: 15px auto;
         }
         form {
             position: relative;

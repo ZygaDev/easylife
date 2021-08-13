@@ -12,7 +12,7 @@ footer {
     }
     span {
         letter-spacing: 0.41px;
-        font: 14px/24px Nunito;
+        font: 16px/24px Nunito;
         font-weight: 700;
         display: block;
         margin: 40px auto 20px auto;
@@ -44,6 +44,11 @@ footer {
 
         .menu {
             display: none;
+        }
+    }
+    .adres {
+        p {
+            width: 33%;
         }
     }
 }

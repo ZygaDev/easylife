@@ -3,15 +3,20 @@ body {
     -webkit-animation: bugfix infinite 1s;
 
     header {
-        @media (max-width: 999px) {
+        @media (max-width: 1029px) {
+            position: relative;
             div.container {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                height: 13vh;
-                .logo.mobile {
-                    width: 115px;
+                height: 100px;
+                a {
+                    img {
+                        width: 115px;
+                        height: auto;
+                    }
                 }
+
                 .logo-menu {
                     position: absolute;
                     width: 115px;

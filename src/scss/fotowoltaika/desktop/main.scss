@@ -1,34 +1,20 @@
-@media (min-width: 1000px) {
+@media (min-width: 1030px) {
     div.fotowoltaika {
-        height: 100vh;
+        overflow: hidden;
         background: none;
-        .back {
-            content: "";
-            background: linear-gradient(180deg, #4d7d1f7d 0%, #385e1300 100%),
-                url("../dist/images/services/Group517@2x.png") 0% 0% no-repeat padding-box;
-            height: 100vh;
-            background-size: cover;
-            position: relative;
-            top: -10vh;
-            width: 50%;
-            background-position: right;
-            text-align: right;
-            float: right;
-        }
-        .breadcrumbs {
-            margin-top: 17px;
-            span {
-                font: normal normal normal 12px/24px Lato;
-                letter-spacing: 0.36px;
-                color: $grey-cta;
+
+        .why_us {
+            .container {
+                max-width: 1300px;
+                width: 100%;
             }
+        }
+
+        span {
+            font: normal normal 800 35px/45px Nunito;
         }
         span.green {
             font: normal normal 800 16px/65px Nunito;
-            letter-spacing: 0px;
-        }
-        span {
-            font: normal normal 800 35px/25px Nunito;
             letter-spacing: 0px;
         }
         .main {
@@ -54,6 +40,214 @@
                     }
                 }
             }
+        }
+        .container {
+            .function {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    font: normal normal bold 22px/36px Nunito;
+                    letter-spacing: 0.79px;
+                }
+                div {
+                    img {
+                        width: 300px;
+                    }
+                    p {
+                        width: 300px;
+                    }
+                }
+                .accord {
+                    width: 300px;
+                }
+            }
+            .benefits {
+                div.extra {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    div.icon {
+                        img {
+                            max-height: 45px;
+                        }
+                    }
+                    span {
+                        font: normal normal bold 16px/24px Nunito;
+                        letter-spacing: 0.48px;
+                        width: 200px;
+                        font: normal normal bold 16px/24px Nunito;
+                        margin: 0 auto;
+                    }
+                }
+                .title {
+                    font: normal normal 800 35px/65px Nunito;
+                    letter-spacing: 0px;
+                    text-align: left;
+                }
+            }
+            .sliders {
+                display: flex;
+                position: relative;
+                justify-content: space-between;
+                ul.splide__list {
+                    display: flex;
+                    max-height: 100%;
+                    li.splide__slide {
+                        width: 300px;
+                        margin: 20px;
+                        img {
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+                span {
+                    max-width: 30%;
+                }
+                .galleryslider {
+                    width: 50%;
+                    max-width: 70%;
+                }
+                a {
+                    position: absolute;
+                    bottom: 0;
+                    text-decoration: none;
+                    .cta {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .rest {
+                display: flex;
+                .diff {
+                    grid-template-columns: repeat(auto-fit, 300px);
+                    grid-template-rows: repeat(auto-fit, 300px);
+                    gap: 30px 30px;
+                    grid-auto-rows: 1fr;
+                    width: 100%;
+                    grid-template-areas:
+                        ". . ."
+                        ". . .";
+                    a {
+                        height: 300px;
+                        width: 300px;
+                        span {
+                            font: normal normal normal 16px/24px Nunito;
+                            letter-spacing: 0.48px;
+                        }
+                    }
+                }
+                .title {
+                    width: 20%;
+                }
+            }
+        }
+    }
+    div.talk {
+        .container {
+            .title {
+                span {
+                    font: normal normal 700 18px/26px Nunito;
+                }
+            }
+        }
+    }
+
+    div.fotowoltaika-main {
+        background: none;
+        margin-bottom: 40px;
+        // display: flex;
+        flex-direction: row;
+        padding-top: 0;
+        .breadcrumbs {
+            margin-top: 17px;
+            max-width: 300px;
+            span {
+                font: normal normal normal 12px/24px Lato;
+                letter-spacing: 0.36px;
+                color: $grey-cta;
+            }
+        }
+        .back {
+            background-position: 50%;
+            background-size: cover;
+            content: "";
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            width: 50%;
+            max-height: 1000px;
+            display: block !important;
+            float: right;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+            &::after {
+                background: linear-gradient(180deg, rgba(77, 125, 31, 0.49), rgba(56, 94, 19, 0));
+                background-position: -35px;
+                background-size: cover;
+                content: "";
+                float: right;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                text-align: right;
+                top: 0;
+                width: 100%;
+            }
+        }
+        .container {
+            position: relative;
+            height: 900px;
+            // width: 50%;
+            .txt {
+                position: absolute;
+                top: 50%;
+                transform: translate(0%, -50%);
+                width: 50%;
+                span {
+                    font: normal normal 800 35px/45px Nunito;
+                }
+                span.green {
+                    font: normal normal 800 16px/65px Nunito;
+                    letter-spacing: 0px;
+                }
+                p {
+                    width: 60%;
+                }
+            }
+        }
+    }
+    div.calculator {
+        div.calc-main {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            .calc {
+                width: 40%;
+            }
+            .title {
+                width: 40%;
+            }
+        }
+        .results,
+        .summary {
+            display: flex;
+            justify-content: space-between;
+
+            .result {
+                max-width: 300px;
+                div {
+                    width: 90%;
+                    margin: 10px auto;
+                    text-align: left;
+                }
+            }
+        }
+        p.small-title {
+            font: normal normal 600 18px/24px Nunito;
+            text-align: center;
         }
     }
 }

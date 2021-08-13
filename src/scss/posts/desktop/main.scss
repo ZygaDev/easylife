@@ -1,0 +1,88 @@
+@media (min-width: 1030px) {
+    div.posts {
+        justify-content: flex-end;
+        div.back {
+            max-height: 1000px;
+            width: 50%;
+            img {
+                height: auto;
+                width: 100%;
+            }
+            &::after {
+                background: linear-gradient(180deg, rgba(77, 125, 31, 0.49), rgba(56, 94, 19, 0));
+                background-position: -35px;
+                background-size: cover;
+                content: "";
+                float: right;
+                height: 1000px;
+                position: absolute;
+                text-align: right;
+                top: 0;
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        .desc {
+            position: relative;
+            width: 50vw;
+            z-index: 9;
+        }
+        .back {
+            overflow: hidden;
+        }
+        .desktop {
+            display: block;
+        }
+        main {
+            display: flex;
+        }
+        div.container {
+            display: flex;
+            flex-direction: column;
+            /* left: 50%; */
+            position: relative;
+            /* top: 100px; */
+            /* transform: translate(-50%); */
+            /* z-index: 99; */
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            .info {
+                left: 50%;
+                position: absolute;
+                top: 50%;
+
+                transform: translate(-50%, -50%);
+
+                display: flex;
+                flex-direction: column;
+                z-index: 99;
+            }
+            span {
+                font-size: 55px;
+                line-height: 65px;
+                font-weight: 900;
+            }
+        }
+    }
+    .extra {
+        display: flex;
+        align-items: center;
+        .galleryslider {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+        .texty {
+            p {
+                font: normal normal 600 18px/36px Nunito;
+                letter-spacing: 0.65px;
+                width: 80%;
+                text-align: left;
+                margin: 0 auto;
+            }
+        }
+    }
+}
