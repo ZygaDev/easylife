@@ -39,19 +39,14 @@
                     </ul> -->
                 </div>
             </nav>
+            <div class="phone">
+                <div class="green" id="togg"></div>
+                <div class="white " id="white">
 
+                    <div class="call"> <?php dynamic_sidebar( 'header-1' ); ?></div>
+                    <a href="/kontakt">
+                        <div class="btn"> Wyślij wiadomość</div>
+                    </a>
+                </div>
+            </div>
     </header>
-    <?php
-    $phone = get_field('telefon');
-    if( $phone ): ?>
-    <div class="phone">
-        <div class="green"></div>
-        <div class="white">
-
-            <div class="call"> <?php dynamic_sidebar( 'header-1' ); ?></div>
-            <a href="/kontakt">
-                <div class="btn"> Wyślij wiadomość</div>
-            </a>
-        </div>
-    </div>
-    <?php endif; ?>

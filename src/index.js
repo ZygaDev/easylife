@@ -8,39 +8,38 @@ require("webpack-jquery-ui/accordion");
 
 // require("webpack-jquery-ui");
 // require("webpack-jquery-ui/css");
-$(".phone div.white").hide();
 
-let my_val = 0;
-$(".phone .green").click(function () {
-    my_val = my_val + 1;
-    $(".phone .white").toggle("slow");
+$("#white").hide();
+$("#togg").on("click", (event) => {
+    $("#white").toggle("slow");
 });
-document.getElementsByTagName("body")[0].onscroll = () => {
-    if ($("#numbers").is(":visible")) {
-        $(".num").each(function () {
-            let $this = $(this),
-                countTo = $this.attr("data-count");
 
-            $({ countNum: $this.text() }).animate(
-                {
-                    countNum: countTo,
+// document.getElementsByTagName("body")[0].onscroll = () => {
+if ($("#numbers").is(":visible")) {
+    $(".num").each(function () {
+        let $this = $(this),
+            countTo = $this.attr("data-count");
+
+        $({ countNum: $this.text() }).animate(
+            {
+                countNum: countTo,
+            },
+
+            {
+                duration: 8000,
+                easing: "linear",
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
                 },
-
-                {
-                    duration: 8000,
-                    easing: "linear",
-                    step: function () {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function () {
-                        $this.text(this.countNum);
-                        //alert('finished');
-                    },
-                }
-            );
-        });
-    }
-};
+                complete: function () {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                },
+            }
+        );
+    });
+}
+//};
 // Load the first 3 list items from another HTML file
 //$('#myList').load('externalList.html li:lt(3)');
 // $("#splide .splide__slide").hide();
@@ -156,13 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
     }
 });
-if (
-    window.location.href.indexOf("/wszystkie-realizacje") > -1 ||
-    window.location.href.indexOf("/baza-informacji") > -1
-) {
-    $("header div.container nav div#overlay ul li.white a").css("color", "#444");
-    $("header div.container nav div#overlay ul li.white.border ").css("border", "2px solid #444");
-}
+
 function init() {
     const sliders = document.getElementsByClassName("tick-slider-input");
 
@@ -268,7 +261,7 @@ function onResize() {
 
 window.onload = init;
 window.addEventListener("resize", onResize);
-if (window.location.href.indexOf("/nasze-uslugi") > -1) {
+if ($(".fotowoltaika-main .cta").is(":visible")) {
     let btn = document.querySelector(".fotowoltaika-main .cta");
     let el = document.querySelector(".function");
 
@@ -286,3 +279,15 @@ $(".shw").on("click", function () {
 $(".ask .texty  li").accordion({ header: "a", collapsible: true, active: 2 });
 
 $(".baza li").accordion({ header: "a", collapsible: true, active: false });
+
+var $lis = $("#menu-header li");
+if ($lis.length > 2) {
+    $lis.slice(-3).addClass("white");
+}
+if (
+    window.location.href.indexOf("/wszystkie-realizacje") > -1 ||
+    window.location.href.indexOf("/baza-informacji") > -1
+) {
+    $("header div.container nav div#overlay ul li.white a").css("color", "#444");
+    $("header div.container nav div#overlay ul li.white.border ").css("border", "2px solid #444");
+}

@@ -57,7 +57,7 @@
     </div>
 </footer>
 
-<script defer src="<?php bloginfo('template_directory'); ?>/dist/app.js"></script>
+<!-- <script defer src="<?php bloginfo('template_directory'); ?>/dist/app.js"></script> -->
 <?php wp_footer(); ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
 
